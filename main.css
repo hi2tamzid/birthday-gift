@@ -332,6 +332,10 @@ blockquote span{
 .section-three{
     margin: 40px 0;
 }
+.section-three h2{
+    text-align: center;
+    font-size: xx-large;
+}
 .single-img{
     position: relative;
     margin: 10px;
