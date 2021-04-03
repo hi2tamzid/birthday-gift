@@ -523,7 +523,7 @@ blockquote span{
 Custom CSS Extra
 **************************** */
 
-.pos-relative{
+/* .pos-relative{
     position: relative;
     width: fit-content;
     color: transparent;
@@ -543,15 +543,76 @@ Custom CSS Extra
       width: 0;
       left: 100%;
     }
-  }
+  } */
   
-  @keyframes text_rev_col{
+  /* @keyframes text_rev_col{
     100%{
       color: white;
     }
+  } */
+
+  .anim-1{
+    text-align: center;
   }
-
-
+  .anim-1 h2{
+    position: relative;
+    width: fit-content;
+    color: transparent;
+    /* color: #fff; */
+    animation: text_reveal .5s ease forwards;
+	animation-delay: 1s;
+	/* animation-delay: 0.8s; */
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  .anim-1 h2 span{
+      position: absolute;
+      background-color: #86c232;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      animation: text_reveal_box 1s ease;
+	animation-delay: .5s;
+  }
+  .anime-2 span{
+      color: transparent;
+      animation: hobby_reveal 1s ease forwards;
+      animation-delay: 1s;
+  }
+  .anime-2 span:nth-child(1){
+	animation-delay: 1.5s;
+  }
+  .anime-2 span:nth-child(2){
+	animation-delay: 2s;
+  }
+  .anime-2 span:nth-child(3){
+	animation-delay: 2.5s;
+  }
+  .anime-2 span:nth-child(4){
+	animation-delay: 3s;
+  }
+  @keyframes text_reveal {
+	100% {
+        color: #86c232;
+	}
+}
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes hobby_reveal {
+    100%{
+        color: white;
+    }
+}
 /***************** Media Queries *****************/
 
 @media screen and (min-width: 678px){
